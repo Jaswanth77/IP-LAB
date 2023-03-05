@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>exp6</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js">
+      </script>
+      <script type="text/javascript">
+                  $(function() {  
+                  $('.colorr').click(function click(){
+                  $('.color').css('background', 'yellow');
+                   });
+                   $("#add").click(function(){
+                        var num1 = parseInt($("#num1").val());
+                        var num2 = parseInt($("#num2").val());
+                        var result = num1 + num2;
+                        $("#ans").val(result);
+                  });
+                  $("#subtract").click(function(){
+                        var num1 = parseInt($("#num1").val());
+                        var num2 = parseInt($("#num2").val());
+                        var result = num1 - num2;
+                        $("#ans").val(result);
+                  });
+                  $("#multiply").click(function(){
+                        var num1 = parseInt($("#num1").val());
+                        var num2 = parseInt($("#num2").val());
+                        var result = num1 * num2;
+                        $("#ans").val(result);
+                  });
+                  $("#divide").click(function(){
+                        var num1 = parseInt($("#num1").val());
+                        var num2 = parseInt($("#num2").val());
+                        var result = num1 / num2;
+                        $("#ans").val(result);
+                  });
+            });
+
+      </script>
+      <style type="text/css">
+            .colorr{
+                  background-color: rgb(117, 222, 234);
+                  height: 30px;
+                  width: 80px;
+                  border-radius: 10px;
+                  margin-top: 10px;
+            }
+           .color{
+                  /*height: 100px;
+                  width: 400px;
+                  overflow: scroll;*/
+                  background-color: rgb(150, 233, 234);
+            }
+      </style>
+
+</head>
+<body>
+      <div class="page">
+            <div class="sub1">
+                  <div class="color">
+                      <p>hit the button to view a change in color</p>
+                  </div>
+                  <input type="button" value="change" class="colorr" onclick="function click()">
+            </div>
+            <hr>
+            <div class="sub2">
+                  Value1:<input type="text" name="value1" id="num1"><br>
+                  value2:<input type="text" name="value2" id="num2"><br>
+                  add
+                  <button id="add" style="background-color: deepskyblue;">+</button><br>
+                  sub
+                  <button id="subtract" style="background-color: aqua;">-</button><br>
+                  mul
+                  <button id="multiply" style="background-color: aquamarine;">*</button><br>
+                  div
+                  <button id="divide" style="background-color: cyan;">/</button><br><br>
+                  Answer<input type="text" name="ans" id="ans" value=""> 
+            </div>
+      </div>
+</body>
+</html>
